@@ -1,0 +1,21 @@
+.grid-container {
+  display: flex;
+  flex-wrap: wrap;
+  /* width: 600px;
+  height: 600px; */
+  height: 75vh;
+  aspect-ratio: 1/1;
+  /* border: 1px solid #000; */
+  position: relative;
+}
+
+.grid-cell {
+  /* width: calc(100% / 16);
+  height: calc(100% / 16); */
+  box-sizing: border-box;
+  background-color: #efe8e8;
+  border: 1px solid #b7b2b2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
