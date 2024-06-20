@@ -17,13 +17,23 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     }
 
+    function getRandomColor() {
+      const letters = "0123456789ABCDEF";
+      let color = "#";
+      for (let i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+      }
+      return color;
+    }
+
+    let color = "black";
+
     document.querySelectorAll(".grid-cell").forEach(function (cell) {
       cell.addEventListener("mouseover", function () {
+        // cell.style.background = getRandomColor();
         cell.style.background = color;
       });
     });
-
-    let color = "black";
   }
 
   createGrid(16);
@@ -41,10 +51,17 @@ document.addEventListener("DOMContentLoaded", function () {
     if (Number.isInteger(numberInput) && numberInput <= 100) {
       // alert("Valid input: " + numberInput);
       createGrid(numberInput);
-      alert("Grid updated to " + numberInput + "x" + numberInput);
+      // alert("Grid updating to " + numberInput + "x" + numberInput);
     } else {
       // If not valid, show an error message
       alert("Error: Input must be an integer of 100 or less.");
     }
+  });
+
+  const clearGridButton = document.getElementById("clear-grid-button");
+
+  clearGridButton.addEventListener("click", function () {
+    const gridContainer = document.getElementById(".grid-cell");
+    gridContainer.style.backgroundColor = "";
   });
 });
