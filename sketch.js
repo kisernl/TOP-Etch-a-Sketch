@@ -26,12 +26,12 @@ document.addEventListener("DOMContentLoaded", function () {
       return color;
     }
 
-    let color = "black";
+    // let color = "black";
 
     document.querySelectorAll(".grid-cell").forEach(function (cell) {
       cell.addEventListener("mouseover", function () {
-        // cell.style.background = getRandomColor();
-        cell.style.background = color;
+        cell.style.background = getRandomColor();
+        // cell.style.background = color;
       });
     });
   }
@@ -61,7 +61,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const clearGridButton = document.getElementById("clear-grid-button");
 
   clearGridButton.addEventListener("click", function () {
-    const gridContainer = document.getElementById(".grid-cell");
-    gridContainer.style.backgroundColor = "";
+    location.reload();
   });
 });
