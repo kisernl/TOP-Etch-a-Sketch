@@ -12,19 +12,23 @@
   justify-content: space-around;
 }
 
+button {
+  width: 170px;
+  font-size: 0.75rem;
+}
+
 .grid-container {
   display: flex;
   flex-wrap: wrap;
-  height: 75vh;
+  height: 100%;
   aspect-ratio: 1/1;
   position: relative;
-  margin-left: 2rem;
   box-sizing: border-box;
 }
 
 .grid-cell {
   box-sizing: border-box;
-  background-color: #efe8e8;
+  background-color: #f1f1f1;
   border: 1px solid #b7b2b2;
   display: flex;
   aspect-ratio: 1/1;
